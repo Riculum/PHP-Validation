@@ -1,0 +1,21 @@
+{
+    "name": "riculum/php-validation",
+    "description": "A complete validation library written in PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Riculum",
+            "email": "riculum@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Validation\\": "./"
+        }
+    },
+    "require": {
+        "php": ">=7.4.0",
+        "ext-json": "*"
+    }
+}
