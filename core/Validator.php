@@ -1030,7 +1030,7 @@ class Validator implements ValidatorInterface
      * @return string|null
      * @throws InvalidValidationException
      */
-    public static function validateChar(?string $char, int $minLength, int $maxLength, bool $required, ?string $default): ?string
+    public static function validateChar(?string $char, int $minLength = 1, int $maxLength = 50, bool $required = false, ?string $default = null): ?string
     {
         if ($required && $char === null) {
             throw new InvalidValidationException('Char is required');
