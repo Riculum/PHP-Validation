@@ -1,8 +1,8 @@
 <?php
-namespace Validation\core;
+namespace Validation;
 
-use Validation\Exceptions\InvalidValidationException;
-use Validation\Interfaces\ValidatorInterface;
+use Validation\exceptions\InvalidValidationException;
+use Validation\interfaces\ValidatorInterface;
 
 class Validator implements ValidatorInterface
 {
