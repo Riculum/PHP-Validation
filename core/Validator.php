@@ -1,5 +1,5 @@
 <?php
-namespace Validation\Core;
+namespace Validation\core;
 
 use Validation\Exceptions\InvalidValidationException;
 use Validation\Interfaces\ValidatorInterface;

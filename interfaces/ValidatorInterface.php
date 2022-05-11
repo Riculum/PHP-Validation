@@ -1,5 +1,5 @@
 <?php
-namespace Validation\Interfaces;
+namespace Validation\interfaces;
 
 interface ValidatorInterface
 {

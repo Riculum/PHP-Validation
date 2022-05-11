@@ -1,4 +1,4 @@
 <?php
-namespace Validation\Exceptions;
+namespace Validation\exceptions;
 
 class InvalidValidationException extends \Exception {}
