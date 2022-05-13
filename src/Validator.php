@@ -1,8 +1,8 @@
 <?php
-namespace Validation;
+namespace Riculum\Validation;
 
-use Validation\exceptions\InvalidValidationException;
-use Validation\interfaces\ValidatorInterface;
+use Riculum\Validation\exceptions\InvalidValidationException;
+use Riculum\Validation\interfaces\ValidatorInterface;
 
 class Validator implements ValidatorInterface
 {

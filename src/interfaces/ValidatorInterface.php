@@ -1,5 +1,5 @@
 <?php
-namespace Validation\interfaces;
+namespace Riculum\Validation\interfaces;
 
 interface ValidatorInterface
 {
