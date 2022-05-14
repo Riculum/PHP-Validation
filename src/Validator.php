@@ -1,6 +1,7 @@
 <?php
 namespace Riculum\Validation;
 
+use JetBrains\PhpStorm\Pure;
 use Riculum\Validation\exceptions\InvalidValidationException;
 use Riculum\Validation\interfaces\ValidatorInterface;
 
@@ -338,6 +339,11 @@ class Validator implements ValidatorInterface
         } catch (InvalidValidationException $e) {
             return false;
         }
+    }
+
+    #[Pure] public static function isValidBoolean($boolean): bool
+    {
+        return self::validateBoolean($boolean);
     }
 
     /**
@@ -1063,5 +1069,10 @@ class Validator implements ValidatorInterface
         }
 
         return $char;
+    }
+
+    static function validateBoolean($boolean): bool
+    {
+        return is_bool($boolean);
     }
 }
