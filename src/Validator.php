@@ -341,9 +341,14 @@ class Validator implements ValidatorInterface
         }
     }
 
-    #[Pure] public static function isValidBoolean($boolean): bool
+    public static function isValidBoolean($boolean): bool
     {
-        return self::validateBoolean($boolean);
+        try {
+            self::validateBoolean($boolean);
+            return true;
+        } catch (InvalidValidationException $e) {
+            return false;
+        }
     }
 
     /**
@@ -1071,8 +1076,15 @@ class Validator implements ValidatorInterface
         return $char;
     }
 
+    /**
+     * @throws InvalidValidationException
+     */
     static function validateBoolean($boolean): bool
     {
-        return is_bool($boolean);
+        if (is_bool($boolean)) {
+            return $boolean;
+        } else {
+            throw new InvalidValidationException($boolean . ' is not a valid boolean');
+        }
     }
 }
